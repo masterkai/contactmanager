@@ -1,0 +1,24 @@
+.App {
+  h1 {
+    //font-size: 1.875rem;
+    text-transform: capitalize;
+  }
+}
+
+.slick-slide {
+  img {
+    width: 100%;
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #ccc;
+}
+
+.card {
+  i {
+    &:hover {
+      color: #ff0006;
+    }
+  }
+}
