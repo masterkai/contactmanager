@@ -1,3 +1,7 @@
+@import "./sassSetting/setting";
+@import "../node_modules/sass-breakpoints/mixins";
+
+
 .App {
   h1 {
     //font-size: 1.875rem;
@@ -16,9 +20,33 @@
 }
 
 .card {
-  i {
-    &:hover {
-      color: #ff0006;
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-lt('md'){
+      flex-direction: column;
+    }
+    h4 {
+      i {
+        &:hover {
+          color: #ff0006;
+        }
+      }
+    }
+    .edit {
+      font-size: 1.2rem;
+      @include breakpoint-lt('md'){
+        margin: 10px auto;
+      }
+      a {
+        i {
+          color: $color-black;
+          &:hover {
+            color: #5a5a5a;
+          }
+        }
+      }
     }
   }
 }

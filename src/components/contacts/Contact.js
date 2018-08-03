@@ -35,32 +35,35 @@ export default class Contact extends Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              <h4>
-                {name}&emsp;
-                <i
-                  onClick={this.showContactDetail}
-                  className={
-                    cardSwitch ? 'fal fa-caret-down' : 'fal fa-caret-right'
-                  }
-                  style={{ cursor: 'pointer' }}
-                />
-                <i
-                  className="fal fa-times"
-                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
-                  onClick={this.deleteItem.bind(this, id, dispatch)}
-                />
-                <Link to={`contact/edit/${id}`}>
+              <div className="flexContainer">
+                <h4>
+                  {name}&emsp;
                   <i
-                    className="fas fa-pen"
-                    style={{
-                      cursor: 'pointer',
-                      float: 'right',
-                      color: 'black',
-                      marginRight: '1rem'
-                    }}
+                    onClick={this.showContactDetail}
+                    className={
+                      cardSwitch ? 'fas fa-caret-down' : 'fas fa-caret-right'
+                    }
+                    style={{ cursor: 'pointer' }}
                   />
-                </Link>
-              </h4>
+                </h4>
+                <div className="edit">
+                  <i
+                    className="fas fa-times"
+                    style={{ cursor: 'pointer', float: 'right', color: 'red' }}
+                    onClick={this.deleteItem.bind(this, id, dispatch)}
+                  />
+                  <Link to={`contact/edit/${id}`}>
+                    <i
+                      className="fas fa-pen"
+                      style={{
+                        cursor: 'pointer',
+                        float: 'right',
+                        marginRight: '1rem'
+                      }}
+                    />
+                  </Link>
+                </div>
+              </div>
               {showContactInfo ? (
                 <ul className="list-group">
                   <li className="list-group-item">Email: {email}</li>

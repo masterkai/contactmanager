@@ -7,5 +7,21 @@
 .slick-prev:before, .slick-next:before {
   color: #ccc; }
 
-.card i:hover {
-  color: #ff0006; }
+.card .flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (max-width: 47.9375em) {
+    .card .flexContainer {
+      flex-direction: column; } }
+  .card .flexContainer h4 i:hover {
+    color: #ff0006; }
+  .card .flexContainer .edit {
+    font-size: 1.2rem; }
+    @media (max-width: 47.9375em) {
+      .card .flexContainer .edit {
+        margin: 10px auto; } }
+    .card .flexContainer .edit a i {
+      color: #000; }
+      .card .flexContainer .edit a i:hover {
+        color: #5a5a5a; }

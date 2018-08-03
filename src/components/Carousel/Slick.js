@@ -6,9 +6,9 @@ import 'slick-carousel/slick/slick-theme.css';
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
-      arrow: true,
+      arrows: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1

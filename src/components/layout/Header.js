@@ -14,7 +14,7 @@ const Header = props => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/contact/add" className="nav-link">
-                <i className="fal fa-plus-circle" />
+                <i className="fas fa-plus" />
                 &nbsp;Add
               </Link>
             </li>
